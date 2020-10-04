@@ -1,7 +1,7 @@
 import matplotlib
 matplotlib.use('TkAgg')
 from numpy import arange, sin, pi
-from matplotlib.backends.backend_tkagg import NavigationToolbar2TkAgg,FigureCanvasTkAgg
+from matplotlib.backends.backend_tkagg import NavigationToolbar2Tk,FigureCanvasTkAgg
 from matplotlib.figure import Figure
 import tkinter as Tk
 import sys
@@ -57,7 +57,7 @@ ax.yaxis.set_ticks_position('left')
 ax.spines['left'].set_position(('data',0))
 # a tk.DrawingArea
 canvas = FigureCanvasTkAgg(f, master=root)
-toolbar = NavigationToolbar2TkAgg(canvas, root)
+toolbar = NavigationToolbar2Tk(canvas, root)
 toolbar.update()
 canvas.draw()
 canvas.get_tk_widget().pack(side=Tk.TOP, fill=Tk.BOTH, expand=1)
